@@ -45,7 +45,7 @@ export const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href={buildWhatsAppLink("Hi Vantastic, I'd like a quote please.")} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-primary transition-smooth">
+                <a href={buildWhatsAppLink("Hi Direct Movers, I'd like a quote please.")} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-primary transition-smooth">
                   <MessageCircle className="w-4 h-4 text-primary" /> WhatsApp us
                 </a>
               </li>

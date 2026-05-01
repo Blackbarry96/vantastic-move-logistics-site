@@ -3,8 +3,8 @@ export const CONTACT = {
   phoneDisplay: "07778 192131",
   phoneIntl: "447778192131", // for wa.me & tel: international
   email: "mbhv_1@yahoo.co.uk",
-  businessName: "Vantastic Move Logistics",
-  tagline: "Vantastic Moves. Door-to-Door. Anywhere in the UK.",
+  businessName: "Direct Movers",
+  tagline: "Direct Movers. Door-to-Door. Anywhere in the UK.",
   whatsappBase: "https://wa.me/447778192131",
 };
 

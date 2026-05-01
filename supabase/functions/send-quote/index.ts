@@ -42,7 +42,7 @@ function renderHtml(d: z.infer<typeof QuoteSchema>): string {
   <div style="max-width:620px;margin:0 auto;background:#fff;border-radius:10px;overflow:hidden;border:1px solid #eee">
     <div style="background:#0a0a0a;color:#fff;padding:20px 24px">
       <h1 style="margin:0;font-size:20px">New Quote Request</h1>
-      <p style="margin:4px 0 0;color:#dc2626;font-weight:600">Vantastic Move Logistics</p>
+      <p style="margin:4px 0 0;color:#dc2626;font-weight:600">Direct Movers</p>
     </div>
     <table style="width:100%;border-collapse:collapse;font-size:14px">
       ${row("Name", d.fullName)}

@@ -5,7 +5,7 @@ interface LogoProps {
 }
 
 /**
- * Vantastic Move Logistics — spearhead with rose petal motif.
+ * Direct Movers — spearhead with rose petal motif.
  * Sharp tip with a small white rose silhouette nested inside.
  */
 export const Logo = ({ className = "", showText = true, variant = "light" }: LogoProps) => {
@@ -47,10 +47,10 @@ export const Logo = ({ className = "", showText = true, variant = "light" }: Log
       {showText && (
         <div className="flex flex-col leading-none">
           <span className={`font-display font-bold text-lg sm:text-xl tracking-wide ${textColor}`}>
-            VANTASTIC
+            DIRECT
           </span>
           <span className={`text-[10px] sm:text-[11px] font-semibold tracking-[0.2em] ${subColor}`}>
-            MOVE&nbsp;LOGISTICS
+            MOVERS
           </span>
         </div>
       )}

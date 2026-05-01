@@ -20,7 +20,7 @@ const About = () => {
           <p className="text-primary font-bold uppercase tracking-widest text-sm mb-3">About Us</p>
           <h1 className="font-display text-4xl sm:text-6xl font-bold mb-4">Driven by passion. Trusted by families.</h1>
           <p className="text-white/75 text-lg max-w-2xl mx-auto">
-            Vantastic Move Logistics is a family-minded, owner-operated UK courier and removals service.
+            Direct Movers is a family-minded, owner-operated UK courier and removals service.
           </p>
         </div>
       </section>
@@ -30,7 +30,7 @@ const About = () => {
           <div className="rounded-2xl overflow-hidden shadow-elegant">
             <img
               src={vanInterior}
-              alt="Inside a Vantastic Move Logistics van loaded carefully with furniture"
+              alt="Inside a Direct Movers van loaded carefully with furniture"
               loading="lazy"
               width={1280}
               height={960}
@@ -41,7 +41,7 @@ const About = () => {
             <h2 className="font-display text-3xl sm:text-4xl font-bold mb-5">Our story</h2>
             <div className="space-y-4 text-foreground/85 leading-relaxed">
               <p>
-                Vantastic Move Logistics was built on one simple idea: moving your stuff shouldn't be stressful.
+                Direct Movers was built on one simple idea: moving your stuff shouldn't be stressful.
                 Too many big removal companies treat customers like a number — late arrivals, hidden fees, broken
                 furniture and zero accountability.
               </p>

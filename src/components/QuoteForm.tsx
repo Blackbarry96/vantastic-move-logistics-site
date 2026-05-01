@@ -59,7 +59,7 @@ export const QuoteForm = () => {
   const urgency = watch("urgency");
 
   const buildSummary = (data: FormValues) =>
-    `New Quote Request — Vantastic Move Logistics
+    `New Quote Request — ${CONTACT.businessName}
 
 Name: ${data.fullName}
 Phone: ${data.phone}

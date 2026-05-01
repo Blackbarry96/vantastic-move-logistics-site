@@ -41,10 +41,27 @@ const Pricing = () => {
 
           <div className="text-center max-w-2xl mx-auto mb-12">
             <h2 className="font-display text-3xl sm:text-4xl font-bold mb-3">How it works</h2>
-            <p className="text-muted-foreground text-lg">Booking a move with Vantastic is straightforward — here's exactly what happens.</p>
+            <p className="text-muted-foreground text-lg">Booking a move with Direct Movers is straightforward — here's exactly what happens.</p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* Desktop: horizontal connected timeline */}
+          <div className="hidden lg:block relative max-w-6xl mx-auto pb-4">
+            <div className="absolute left-[10%] right-[10%] top-8 h-0.5 bg-gradient-to-r from-primary/10 via-primary/35 to-primary/10" aria-hidden />
+            <ol className="relative flex justify-between gap-2">
+              {steps.map((s) => (
+                <li key={s.title} className="flex flex-1 flex-col items-center text-center min-w-0 max-w-[240px] mx-auto">
+                  <div className="relative z-10 mb-4 flex h-16 w-16 shrink-0 items-center justify-center rounded-full border-2 border-primary bg-card text-primary shadow-card">
+                    <s.icon className="h-7 w-7" aria-hidden />
+                  </div>
+                  <h3 className="font-display text-base font-bold mb-2 leading-snug px-1">{s.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed px-1">{s.desc}</p>
+                </li>
+              ))}
+            </ol>
+          </div>
+
+          {/* Mobile / tablet: stacked cards */}
+          <div className="grid sm:grid-cols-2 lg:hidden gap-6">
             {steps.map((s) => (
               <div key={s.title} className="bg-card border border-border rounded-xl p-6 shadow-card">
                 <div className="w-12 h-12 rounded-lg bg-secondary text-primary flex items-center justify-center mb-4">
@@ -86,16 +103,18 @@ const Pricing = () => {
           <h2 className="font-display text-3xl sm:text-4xl font-bold mb-4">Ready to get a quote?</h2>
           <p className="text-white/75 mb-8 max-w-xl mx-auto">Free, no-obligation quote. Get a price in minutes.</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Button asChild size="lg" className="bg-primary hover:bg-primary-glow h-14 px-8">
+            <Button asChild size="lg" className="bg-primary hover:bg-primary-glow h-14 px-8 min-h-[44px]">
               <Link to="/contact">Request a Quote</Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="h-14 px-8 bg-white/10 border-white/30 text-white hover:bg-white hover:text-secondary">
-              <a href={buildWhatsAppLink("Hi Vantastic, I'd like a quote please.")} target="_blank" rel="noopener noreferrer">
+            <Button asChild size="lg" variant="outline" className="h-14 px-8 bg-white/10 border-white/30 text-white hover:bg-white hover:text-secondary min-h-[44px]">
+              <a href={buildWhatsAppLink("Hi Direct Movers, I'd like a quote please.")} target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="w-4 h-4" /> WhatsApp Us
               </a>
             </Button>
-            <Button asChild size="lg" variant="outline" className="h-14 px-8 bg-white/10 border-white/30 text-white hover:bg-white hover:text-secondary">
-              <a href={`tel:${CONTACT.phone}`}><Phone className="w-4 h-4" /> {CONTACT.phoneDisplay}</a>
+            <Button asChild size="lg" variant="outline" className="h-14 px-8 bg-white/10 border-white/30 text-white hover:bg-white hover:text-secondary min-h-[44px]">
+              <a href={`tel:${CONTACT.phone}`}>
+                <Phone className="w-4 h-4" /> {CONTACT.phoneDisplay}
+              </a>
             </Button>
           </div>
         </div>

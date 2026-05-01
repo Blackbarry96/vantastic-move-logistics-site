@@ -36,7 +36,7 @@ const Contact = () => {
                   </a>
                 </li>
                 <li>
-                  <a href={buildWhatsAppLink("Hi Vantastic, I'd like a quote please.")} target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 hover:text-primary transition-smooth">
+                  <a href={buildWhatsAppLink("Hi Direct Movers, I'd like a quote please.")} target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 hover:text-primary transition-smooth">
                     <MessageCircle className="w-5 h-5 text-primary mt-0.5 shrink-0" />
                     <div>
                       <p className="font-semibold text-base">WhatsApp</p>

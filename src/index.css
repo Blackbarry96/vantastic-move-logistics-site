@@ -4,7 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Vantastic Move Logistics — Black & Crimson design system. All colors HSL. */
+/* Direct Movers — Black & Crimson design system. All colors HSL. */
 
 @layer base {
   :root {
@@ -47,7 +47,13 @@
     --brand-red: 0 78% 47%;
     --brand-red-glow: 0 90% 60%;
 
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 4% / 0.85) 0%, hsl(0 0% 4% / 0.6) 50%, hsl(0 78% 30% / 0.7) 100%);
+    --gradient-hero: linear-gradient(
+      145deg,
+      hsl(0 0% 3% / 0.92) 0%,
+      hsl(0 0% 8% / 0.72) 38%,
+      hsl(0 78% 22% / 0.55) 72%,
+      hsl(0 0% 5% / 0.88) 100%
+    );
     --gradient-red: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-glow)) 100%);
     --gradient-dark: linear-gradient(180deg, hsl(0 0% 8%) 0%, hsl(0 0% 4%) 100%);
 
@@ -119,8 +125,38 @@
   .shadow-elegant { box-shadow: var(--shadow-elegant); }
   .transition-smooth { transition: var(--transition-smooth); }
 
+  /** Radial vignette + bottom weight so hero photography stays legible */
+  .hero-vignette {
+    background:
+      radial-gradient(ellipse 85% 65% at 50% 42%, transparent 0%, hsl(0 0% 2% / 0.72) 100%),
+      linear-gradient(to top, hsl(0 0% 2% / 0.55) 0%, transparent 42%);
+    pointer-events: none;
+  }
+
   .container-tight {
     @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .reveal-section {
+    opacity: 0;
+    transform: translateY(16px);
+    transition:
+      opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .reveal-section-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-section,
+  .reveal-section-visible {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
   }
 }
 

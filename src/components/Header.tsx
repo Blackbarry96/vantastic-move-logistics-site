@@ -20,7 +20,7 @@ export const Header = () => {
   return (
     <header className="sticky top-0 z-50 bg-secondary/95 backdrop-blur-md border-b border-secondary-foreground/10">
       <div className="container-tight flex items-center justify-between h-16 md:h-20">
-        <Link to="/" onClick={() => setOpen(false)} aria-label="Vantastic Move Logistics home">
+        <Link to="/" onClick={() => setOpen(false)} aria-label="Direct Movers home">
           <Logo variant="dark" />
         </Link>
 
