@@ -3,8 +3,13 @@
 // If no email provider is configured, it logs the payload (still succeeds) so the
 // form's WhatsApp/phone fallback always works.
 
-import { corsHeaders } from "@supabase/supabase-js/cors";
 import { z } from "https://esm.sh/zod@3.23.8";
+
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
+  "Access-Control-Allow-Methods": "POST, OPTIONS",
+};
 
 const BUSINESS_EMAIL = "mbhv_1@yahoo.co.uk";
 
